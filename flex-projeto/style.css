@@ -1,3 +1,120 @@
-body{
-    
+html{
+    font-family: 'Open Sans', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}/* iniciando todos os atributos margem 0 
+e padding 0 com font definida*/ 
+
+ul{
+    list-style: none;
+}/*removendo pontos da listagem*/
+
+ul li a{
+    text-decoration: none;
+}/* removendo formatacao de listagem e links */
+
+div img{
+    display: block;
+    width: 100%;
+}
+
+.f-c{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    width: 100%;
+}/*primeiro container definido header/div*/
+
+header{
+    background: hsl(219, 66%, 21%);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: white;
+}/*manipulando style dos header
+centralizando e habilitando display flex*/
+
+header .list-itens{
+    display: flex;
+    max-width: 200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}/*habilitando display flex ... 
+diretamente na listagem? de novo?*/
+
+.list-itens li a{
+    color: white;
+}
+
+header .menu{
+    justify-content: space-between;
+}/*justificando o container header/div = menu 
+as bordas criando o espacamento do centro 
+entre o titulo e a listagem do header*/
+
+.apresentacao{
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}/*segundo container div post 1,
+alinhando e visual port 100?*/
+
+.apresentacao .txt-apre{
+    min-height: 200px;
+}
+
+.txt-apre h1{
+     color: hsl(219, 66%, 21%);
+     font-size: 48px;
+     margin-bottom: 3%;
+}   
+
+ .txt-apre a{
+    background: hsl(219, 66%, 21%);
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    display: block;
+    text-decoration: none;
+    height: 200%;
+    line-height: 350%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#quem-somos{
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#quem-somos h2{
+    font-size: 32px;
+    color: hsl(219, 66%, 21%);
+    display: flex;
+    margin-bottom: 2%;
+}
+
+#quem-somos h2::before{
+    content: " ";
+    height: 45px;
+    width: 5px;
+    margin-right: 1%;
+    background: hsl(219, 66%, 21%);
+    position: relative;
+    border-radius: 5px;
+}
+
+#quem-somos p{
+    margin-bottom: 5%;
+    width: 90%
+}
+#quem-somos img{
+    min-width: 70%;
+}
+
+.c-ext{
+    background: hsl(219, 66%, 21%);
+    width: 100%;
 }
