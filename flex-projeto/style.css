@@ -1,122 +1,270 @@
-/*em construcao*/
-
-html{
-    font-family: 'Open Sans', 'sans-serif';
-    margin: 0;
+*{
     padding: 0;
-}/* iniciando todos os atributos margem 0 
-e padding 0 com font definida*/ 
-
-ul{
-    list-style: none;
-}/*removendo pontos da listagem*/
-
-ul li a{
-    text-decoration: none;
-}/* removendo formatacao de listagem e links */
-
-div img{
-    display: block;
-    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Open Verdana, sans-serif;
 }
 
-.f-c{
+.flex-container{
     display: flex;
-    max-width: 900px;
     margin: auto;
-    width: 100%;
-}/*primeiro container definido header/div*/
+    justify-content: space-between;
+    align-items: center;
+    max-width: 85%;
+    width: 1024px;
+}
 
 header{
-    background: hsl(219, 66%, 21%);
-    height: 100px;
     display: flex;
-    align-items: center;
-    color: white;
-}/*manipulando style dos header
-centralizando e habilitando display flex*/
-
-header .list-itens{
-    display: flex;
-    max-width: 200px;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}/*habilitando display flex ... 
-diretamente na listagem? de novo?*/
-
-.list-itens li a{
-    color: white;
-}
-
-header .menu{
-    justify-content: space-between;
-}/*justificando o container header/div = menu 
-as bordas criando o espacamento do centro 
-entre o titulo e a listagem do header*/
-
-.apresentacao{
-    height: 100vh;
-    align-items: center;
-    justify-content: space-between;
-}/*segundo container div post 1,
-alinhando e visual port 100?*/
-
-.apresentacao .txt-apre{
-    min-height: 200px;
-}
-
-.txt-apre h1{
-     color: hsl(219, 66%, 21%);
-     font-size: 48px;
-     margin-bottom: 3%;
-}   
-
- .txt-apre a{
+    height: 105px;
     background: hsl(219, 66%, 21%);
     color: white;
-    text-align: center;
-    border-radius: 20px;
-    display: block;
-    text-decoration: none;
-    height: 200%;
-    line-height: 350%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    box-shadow: 0px 2.5px 25px rgb(150 150 150);
 }
+    h1{
+        font-size: 170%;
+    }
+    .menu{
+        display: flex;
+        list-style: none;
+    }
+        .menu li a{
+            display: flex;
+            margin: 0px 10px;
+            padding: 10px 0px;
+            font-size: 78%;
+            width: 100%;
+            text-decoration: none;
+            color: white;
+        }
+            .menu li a:hover{
+                display: flex;
+                justify-content: center ;
+                align-items: center;
+                text-decoration: none;
+                margin: auto;
+                padding: 10px 10px;
+                border-radius: 30px;
+                background: rgba(140, 140, 150, 0.525);
+                width: 100%
+            }
+
+.intro{
+    align-items: center;
+    justify-content: space-between;
+    padding: 15vh 0px 0vh 0;
+}
+    .intro h1{
+        width: 100%;
+        margin: 10% 0px;
+        color: hsl(219, 66%, 21%);
+        font-size: 52px;
+    }
+    .intro p{
+        margin-top: auto;
+        font-size: 22px;
+    }
+    .button{
+        display: flex;
+        margin-top: 13%;
+        align-items: center;
+        justify-content: center ;
+        border-radius: 35px;
+        width: 150px;
+        height: 50px;
+        background: hsl(219, 66%, 21%);
+        color: white;
+        text-decoration: none;
+    }
+    .intro img{
+        display: flex;
+        max-width: 475px;
+        width: 100%;
+    }
 
 #quem-somos{
     flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 15vh 0;
 }
+    #quem-somos h2::before{
+        margin-right: 1%;
+        border-radius: 5px;
+        height: 45px;
+        width: 5px;
+        background: hsl(219, 66%, 21%);
+        position: relative;
+        content: " ";
+    }
+    #quem-somos h2{
+        display: flex;
+        margin-bottom: 6%;
+        align-items: center;
+        color: hsl(219, 66%, 21%);
+        font-size: 32px;
+    }
+    #quem-somos img{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: auto;
+        max-width: 100%;
+        width: 100%;
+    }
 
-#quem-somos h2{
-    font-size: 32px;
+.container-ext{
+    background: hsl(219, 66%, 21%);
+    padding: 0 0 15vh 0;
+    box-shadow: 0px 2.5px 25px rgb(150 150 150);
+}
+    #servicos{
+        flex-direction: column;
+    }
+        #servicos h2{
+            color: white;
+            font-size: 32px;
+            margin: 9vh 0 9vh 0;
+        }
+    .list-servicos{
+        display: flex ;
+        justify-content: space-between;
+    }
+        .list-servicos .item-servico{
+            text-align: center;
+        }
+            .item-servico p{
+                margin-top: 20px;
+                font-weight: 700;
+                font-size: 12px;
+                color: white;
+            }
+            .item-servico a{
+                margin-top: 20px;
+                width: 120px;
+                text-decoration: none;
+                background: white;
+                border-radius: 30px;
+                text-align: center;
+                line-height: 50px;
+                padding: 5px 10px;
+                font-size: 16px;
+            }
+            .item-servico img{
+                width: 80%;
+                margin: auto;
+            }
+
+#planos{
+    flex-direction: column;
+    padding: 9vh 0 0 0;
+}
+    #planos h2{
     color: hsl(219, 66%, 21%);
+    font-size: 32px;
+    margin-bottom: 20px;
+    }
+    .list-planos{
     display: flex;
-    margin-bottom: 2%;
-}
-
-#quem-somos h2::before{
-    content: " ";
-    height: 45px;
-    width: 5px;
-    margin-right: 1%;
+    align-items: flex-end;
+    }
+        .item-plano{
+        flex: 1;
+        border: 5px solid hsl(219, 66%, 21%);
+        margin-right: 20px;
+        padding: 10px;
+        max-width: 240px;
+        }
+            .item-plano h3{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: hsl(219, 66%, 21%);
+            margin-bottom: 20px;
+            }
+            .item-plano h3::after{
+            margin-top: 20px;
+            margin-bottom: 5px;
+            content: "";
+            background-color: hsl(219, 66%, 21%);
+            width: 100%;
+            height: 2px;
+            }
+            .item-plano ul{
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            }
+            .item-plano ul li{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            }
+            .item-plano ul li::before{
+            content: "";
+            align-self: flex-start;
+            max-width: 5px;
+            width: 100%;
+            height: 5px;
+            background: hsl(219, 66%, 21%);
+            margin: 5px 10px 0px 0px;
+            }
+            .item-plano .button{
+            margin: auto;
+            margin-bottom: 20px;
+            }
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vh;
+    margin-top: 50px;
     background: hsl(219, 66%, 21%);
-    position: relative;
-    border-radius: 5px;
+    color: white;
+    box-shadow: 0px -5px 25px rgb(150 150 150);
+    flex-wrap: wrap;
+    align-content: center;
 }
+    footer p{
+        display: flex;
+        font-size: 64%;
+        font-style: italic;
+        position: relative;
+        width: 90%;
+        line-height: 2vh;
+    }
 
-#quem-somos p{
-    margin-bottom: 5%;
-    width: 90%
-}
-#quem-somos img{
-    min-width: 70%;
-}
-
-.c-ext{
-    background: hsl(219, 66%, 21%);
-    width: 100%;
+/*mobile*/
+@media(max-width: 620px){
+    .flex-container{
+        flex-direction: column;
+    }
+    .intro{
+        flex-direction: column-reverse;
+    }
+    .intro p{
+        width: 100%;
+    }
+    #quem-somos{
+        flex-direction: column-reverse;
+    }
+    .list-servicos{
+        flex-direction: column;
+    }
+    .item-servico img{
+        width: 50%;
+        margin: auto;
+    }
+    .list-planos{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .list-planos .item-plano{
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
